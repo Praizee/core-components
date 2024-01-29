@@ -1,20 +1,38 @@
 // import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-// import Greet from "./components/Greet";
+import Box from "./components/Box";
 
 export default function App() {
   return (
+    // <View style={{ backgroundColor: "plum", flex: 1 }}></View>
     <View style={styles.container}>
-      <Text style={styles.container}>Stylesheet API</Text>
+      {/* position is set to relative by default,you can then add top, left,right, bottom, etc */}
+      <Box style={{ backgroundColor: "#8e9b00", top: 75, left: 75 }}>Box 1</Box>
+      <Box style={{ backgroundColor: "#b65d1f" }}>Box 2</Box>
+      <Box style={{ backgroundColor: "#1c4c56" }}>Box 3</Box>
+      <Box
+        style={{
+          backgroundColor: "#ab9156",
+          position: "absolute",
+          // top: 100,
+          // left: 100,
+        }}
+      >
+        Box 4
+      </Box>
+      <Box style={{ backgroundColor: "#6b0803" }}>Box 5</Box>
+      <Box style={{ backgroundColor: "#1c4c56" }}>Box 6</Box>
+      <Box style={{ backgroundColor: "#b95f21" }}>Box 7</Box>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, //occupy entire available space
-    backgroundColor: "plum",
-    padding: 60,
+    flex: 1,
+    // height: 300,
+    marginTop: 64,
+    borderWidth: 6,
+    borderColor: "red",
   },
-  title: {},
 });
